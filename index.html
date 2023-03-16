@@ -1,0 +1,2364 @@
+<!DOCTYPE html>
+<html lang="en"
+  class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths">
+
+<head>
+  <meta charset="utf-8">
+  <title>Hiiree</title>
+  <link rel="icon" href="assets/img/hiiree.small.png" />
+  <!--  <meta name="viewport" content="width=device-width, initial-scale=1">-->
+  <!--  <link rel="icon" type="image/x-icon" href="favicon.ico">-->
+  <!--  <link rel="manifest" href="manifest.webmanifest">-->
+  <meta name="theme-color" content="#1976d2">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sasoft - Software Landing Page">
+
+  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+  <!-- ========== Start Stylesheet ========== -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/css/themify-icons.css" rel="stylesheet">
+  <link href="assets/css/flaticon-set.css" rel="stylesheet">
+  <link href="assets/css/magnific-popup.css" rel="stylesheet">
+  <link href="assets/css/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/css/owl.theme.default.min.css" rel="stylesheet">
+  <link href="assets/css/animate.css" rel="stylesheet">
+  <link href="assets/css/bootsnav.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/responsive.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+  <!-- ========== End Stylesheet ========== -->
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="assets/js/html5/html5shiv.min.js"></script>
+  <script src="assets/js/html5/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- ========== Google Fonts ========== -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.92531f593bf612be64f6.css">
+  <style></style>
+  <style>
+    .ngx-progress-bar[_ngcontent-plk-c9] {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      z-index: 99999 !important;
+      display: none;
+      color: #00acc1;
+      overflow: hidden
+    }
+
+    .ngx-progress-bar.foreground-closing[_ngcontent-plk-c9],
+    .ngx-progress-bar.loading-foreground[_ngcontent-plk-c9] {
+      display: block
+    }
+
+    .ngx-progress-bar.foreground-closing[_ngcontent-plk-c9] {
+      opacity: 0 !important;
+      transition: opacity .5s ease-out .5s
+    }
+
+    .ngx-progress-bar.fast-closing[_ngcontent-plk-c9] {
+      transition: opacity .3s ease-out .3s !important
+    }
+
+    .ngx-progress-bar[_ngcontent-plk-c9]:after,
+    .ngx-progress-bar[_ngcontent-plk-c9]:before {
+      background-color: currentColor;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0
+    }
+
+    .ngx-progress-bar-ltr[_ngcontent-plk-c9]:before {
+      transform: translate3d(-100%, 0, 0)
+    }
+
+    .ngx-progress-bar-ltr[_ngcontent-plk-c9]:after {
+      animation: progressBar-slide-ltr 12s ease-out 0s 1 normal;
+      transform: translate3d(-5%, 0, 0)
+    }
+
+    .ngx-progress-bar-rtl[_ngcontent-plk-c9]:before {
+      transform: translate3d(100%, 0, 0)
+    }
+
+    .ngx-progress-bar-rtl[_ngcontent-plk-c9]:after {
+      animation: progressBar-slide-rtl 12s ease-out 0s 1 normal;
+      transform: translate3d(5%, 0, 0)
+    }
+
+    .foreground-closing.ngx-progress-bar-ltr[_ngcontent-plk-c9]:before {
+      animation: progressBar-slide-complete-ltr 1s ease-out 0s 1;
+      transform: translateZ(0)
+    }
+
+    .fast-closing.ngx-progress-bar-ltr[_ngcontent-plk-c9]:before {
+      animation: progressBar-slide-complete-ltr .6s ease-out 0s 1 !important
+    }
+
+    .foreground-closing.ngx-progress-bar-rtl[_ngcontent-plk-c9]:before {
+      animation: progressBar-slide-complete-rtl 1s ease-out 0s 1;
+      transform: translateZ(0)
+    }
+
+    .fast-closing.ngx-progress-bar-rtl[_ngcontent-plk-c9]:before {
+      animation: progressBar-slide-complete-rtl .6s ease-out 0s 1 !important
+    }
+
+    @keyframes progressBar-slide-ltr {
+      0% {
+        transform: translate3d(-100%, 0, 0)
+      }
+
+      to {
+        transform: translate3d(-5%, 0, 0)
+      }
+    }
+
+    @keyframes progressBar-slide-rtl {
+      0% {
+        transform: translate3d(100%, 0, 0)
+      }
+
+      to {
+        transform: translate3d(5%, 0, 0)
+      }
+    }
+
+    @keyframes progressBar-slide-complete-ltr {
+      0% {
+        transform: translate3d(-75%, 0, 0)
+      }
+
+      50% {
+        transform: translateZ(0)
+      }
+    }
+
+    @keyframes progressBar-slide-complete-rtl {
+      0% {
+        transform: translate3d(75%, 0, 0)
+      }
+
+      50% {
+        transform: translateZ(0)
+      }
+    }
+
+    .ngx-overlay[_ngcontent-plk-c9] {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 99998 !important;
+      background-color: rgba(40, 40, 40, .8);
+      cursor: progress;
+      display: none
+    }
+
+    .ngx-overlay.foreground-closing[_ngcontent-plk-c9],
+    .ngx-overlay.loading-foreground[_ngcontent-plk-c9] {
+      display: block
+    }
+
+    .ngx-overlay.foreground-closing[_ngcontent-plk-c9] {
+      opacity: 0 !important;
+      transition: opacity .5s ease-out .5s
+    }
+
+    .ngx-overlay.fast-closing[_ngcontent-plk-c9] {
+      transition: opacity .3s ease-out .3s !important
+    }
+
+    .ngx-overlay[_ngcontent-plk-c9]>.ngx-foreground-spinner[_ngcontent-plk-c9] {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      margin: 0;
+      color: #00acc1
+    }
+
+    .ngx-overlay[_ngcontent-plk-c9]>.ngx-loading-logo[_ngcontent-plk-c9] {
+      position: fixed;
+      margin: 0;
+      width: 120px;
+      height: 120px
+    }
+
+    .ngx-overlay[_ngcontent-plk-c9]>.ngx-loading-text[_ngcontent-plk-c9] {
+      position: fixed;
+      margin: 0;
+      font-family: sans-serif;
+      font-weight: 400;
+      font-size: 1.2em;
+      color: #fff
+    }
+
+    .ngx-background-spinner[_ngcontent-plk-c9] {
+      position: fixed;
+      z-index: 99997 !important;
+      width: 60px;
+      height: 60px;
+      margin: 0;
+      color: #00acc1;
+      opacity: .6;
+      display: none
+    }
+
+    .ngx-background-spinner.background-closing[_ngcontent-plk-c9],
+    .ngx-background-spinner.loading-background[_ngcontent-plk-c9] {
+      display: block
+    }
+
+    .ngx-background-spinner.background-closing[_ngcontent-plk-c9] {
+      opacity: 0 !important;
+      transition: opacity .7s ease-out
+    }
+
+    .ngx-background-spinner.fast-closing[_ngcontent-plk-c9] {
+      transition: opacity .4s ease-out !important
+    }
+
+    .ngx-position-absolute[_ngcontent-plk-c9],
+    .ngx-position-absolute[_ngcontent-plk-c9]>.ngx-foreground-spinner[_ngcontent-plk-c9],
+    .ngx-position-absolute[_ngcontent-plk-c9]>.ngx-loading-logo[_ngcontent-plk-c9],
+    .ngx-position-absolute[_ngcontent-plk-c9]>.ngx-loading-text[_ngcontent-plk-c9] {
+      position: absolute !important
+    }
+
+    .ngx-position-absolute.ngx-progress-bar[_ngcontent-plk-c9] {
+      z-index: 99996 !important
+    }
+
+    .ngx-position-absolute.ngx-overlay[_ngcontent-plk-c9] {
+      z-index: 99995 !important
+    }
+
+    .ngx-position-absolute.ngx-background-spinner[_ngcontent-plk-c9],
+    .ngx-position-absolute[_ngcontent-plk-c9] .sk-square-jelly-box[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:first-child {
+      z-index: 99994 !important
+    }
+
+    .top-left[_ngcontent-plk-c9] {
+      top: 30px;
+      left: 30px
+    }
+
+    .top-center[_ngcontent-plk-c9] {
+      top: 30px;
+      left: 50%;
+      transform: translateX(-50%)
+    }
+
+    .top-right[_ngcontent-plk-c9] {
+      top: 30px;
+      right: 30px
+    }
+
+    .center-left[_ngcontent-plk-c9] {
+      top: 50%;
+      left: 30px;
+      transform: translateY(-50%)
+    }
+
+    .center-center[_ngcontent-plk-c9] {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%)
+    }
+
+    .center-right[_ngcontent-plk-c9] {
+      top: 50%;
+      right: 30px;
+      transform: translateY(-50%)
+    }
+
+    .bottom-left[_ngcontent-plk-c9] {
+      bottom: 30px;
+      left: 30px
+    }
+
+    .bottom-center[_ngcontent-plk-c9] {
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%)
+    }
+
+    .bottom-right[_ngcontent-plk-c9] {
+      bottom: 30px;
+      right: 30px
+    }
+
+    .sk-ball-scale-multiple[_ngcontent-plk-c9],
+    .sk-ball-scale-multiple[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      position: relative;
+      box-sizing: border-box
+    }
+
+    .sk-ball-scale-multiple[_ngcontent-plk-c9] {
+      width: 100%;
+      height: 100%;
+      font-size: 0
+    }
+
+    .sk-ball-scale-multiple[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      display: inline-block;
+      float: none;
+      background-color: currentColor;
+      border: 0 solid;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      opacity: 0;
+      animation: ball-scale-multiple 1s linear 0s infinite
+    }
+
+    .sk-ball-scale-multiple[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(2) {
+      animation-delay: .2s
+    }
+
+    .sk-ball-scale-multiple[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(3) {
+      animation-delay: .4s
+    }
+
+    @keyframes ball-scale-multiple {
+      0% {
+        opacity: 0;
+        transform: scale(0)
+      }
+
+      5% {
+        opacity: .75
+      }
+
+      to {
+        opacity: 0;
+        transform: scale(1)
+      }
+    }
+
+    .sk-ball-spin[_ngcontent-plk-c9],
+    .sk-ball-spin[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      position: relative;
+      box-sizing: border-box
+    }
+
+    .sk-ball-spin[_ngcontent-plk-c9] {
+      width: 100%;
+      height: 100%;
+      font-size: 0
+    }
+
+    .sk-ball-spin[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      display: inline-block;
+      float: none;
+      background-color: currentColor;
+      border: 0 solid;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 25%;
+      height: 25%;
+      margin-top: -12.5%;
+      margin-left: -12.5%;
+      border-radius: 100%;
+      animation: ball-spin-clockwise 1s ease-in-out infinite
+    }
+
+    .sk-ball-spin[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:first-child {
+      top: 5%;
+      left: 50%;
+      animation-delay: -1.125s
+    }
+
+    .sk-ball-spin[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(2) {
+      top: 18.1801948466%;
+      left: 81.8198051534%;
+      animation-delay: -1.25s
+    }
+
+    .sk-ball-spin[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(3) {
+      top: 50%;
+      left: 95%;
+      animation-delay: -1.375s
+    }
+
+    .sk-ball-spin[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(4) {
+      top: 81.8198051534%;
+      left: 81.8198051534%;
+      animation-delay: -1.5s
+    }
+
+    .sk-ball-spin[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(5) {
+      top: 94.9999999966%;
+      left: 50.0000000005%;
+      animation-delay: -1.625s
+    }
+
+    .sk-ball-spin[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(6) {
+      top: 81.8198046966%;
+      left: 18.1801949248%;
+      animation-delay: -1.75s
+    }
+
+    .sk-ball-spin[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(7) {
+      top: 49.9999750815%;
+      left: 5.0000051215%;
+      animation-delay: -1.875s
+    }
+
+    .sk-ball-spin[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(8) {
+      top: 18.179464974%;
+      left: 18.1803700518%;
+      animation-delay: -2s
+    }
+
+    @keyframes ball-spin {
+
+      0%,
+      to {
+        opacity: 1;
+        transform: scale(1)
+      }
+
+      20% {
+        opacity: 1
+      }
+
+      80% {
+        opacity: 0;
+        transform: scale(0)
+      }
+    }
+
+    .sk-ball-spin-clockwise[_ngcontent-plk-c9],
+    .sk-ball-spin-clockwise[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      position: relative;
+      box-sizing: border-box
+    }
+
+    .sk-ball-spin-clockwise[_ngcontent-plk-c9] {
+      width: 100%;
+      height: 100%;
+      font-size: 0
+    }
+
+    .sk-ball-spin-clockwise[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      display: inline-block;
+      float: none;
+      background-color: currentColor;
+      border: 0 solid;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 25%;
+      height: 25%;
+      margin-top: -12.5%;
+      margin-left: -12.5%;
+      border-radius: 100%;
+      animation: ball-spin-clockwise 1s ease-in-out infinite
+    }
+
+    .sk-ball-spin-clockwise[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:first-child {
+      top: 5%;
+      left: 50%;
+      animation-delay: -.875s
+    }
+
+    .sk-ball-spin-clockwise[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(2) {
+      top: 18.1801948466%;
+      left: 81.8198051534%;
+      animation-delay: -.75s
+    }
+
+    .sk-ball-spin-clockwise[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(3) {
+      top: 50%;
+      left: 95%;
+      animation-delay: -.625s
+    }
+
+    .sk-ball-spin-clockwise[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(4) {
+      top: 81.8198051534%;
+      left: 81.8198051534%;
+      animation-delay: -.5s
+    }
+
+    .sk-ball-spin-clockwise[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(5) {
+      top: 94.9999999966%;
+      left: 50.0000000005%;
+      animation-delay: -.375s
+    }
+
+    .sk-ball-spin-clockwise[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(6) {
+      top: 81.8198046966%;
+      left: 18.1801949248%;
+      animation-delay: -.25s
+    }
+
+    .sk-ball-spin-clockwise[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(7) {
+      top: 49.9999750815%;
+      left: 5.0000051215%;
+      animation-delay: -.125s
+    }
+
+    .sk-ball-spin-clockwise[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(8) {
+      top: 18.179464974%;
+      left: 18.1803700518%;
+      animation-delay: 0s
+    }
+
+    @keyframes ball-spin-clockwise {
+
+      0%,
+      to {
+        opacity: 1;
+        transform: scale(1)
+      }
+
+      20% {
+        opacity: 1
+      }
+
+      80% {
+        opacity: 0;
+        transform: scale(0)
+      }
+    }
+
+    .sk-ball-spin-clockwise-fade-rotating[_ngcontent-plk-c9],
+    .sk-ball-spin-clockwise-fade-rotating[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      position: relative;
+      box-sizing: border-box
+    }
+
+    .sk-ball-spin-clockwise-fade-rotating[_ngcontent-plk-c9] {
+      font-size: 0;
+      width: 100%;
+      height: 100%;
+      animation: ball-spin-clockwise-fade-rotating-rotate 6s linear infinite
+    }
+
+    .sk-ball-spin-clockwise-fade-rotating[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      display: inline-block;
+      float: none;
+      background-color: currentColor;
+      border: 0 solid;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 25%;
+      height: 25%;
+      margin-top: -12.5%;
+      margin-left: -12.5%;
+      border-radius: 100%;
+      animation: ball-spin-clockwise-fade-rotating 1s linear infinite
+    }
+
+    .sk-ball-spin-clockwise-fade-rotating[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:first-child {
+      top: 5%;
+      left: 50%;
+      animation-delay: -.875s
+    }
+
+    .sk-ball-spin-clockwise-fade-rotating[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(2) {
+      top: 18.1801948466%;
+      left: 81.8198051534%;
+      animation-delay: -.75s
+    }
+
+    .sk-ball-spin-clockwise-fade-rotating[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(3) {
+      top: 50%;
+      left: 95%;
+      animation-delay: -.625s
+    }
+
+    .sk-ball-spin-clockwise-fade-rotating[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(4) {
+      top: 81.8198051534%;
+      left: 81.8198051534%;
+      animation-delay: -.5s
+    }
+
+    .sk-ball-spin-clockwise-fade-rotating[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(5) {
+      top: 94.9999999966%;
+      left: 50.0000000005%;
+      animation-delay: -.375s
+    }
+
+    .sk-ball-spin-clockwise-fade-rotating[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(6) {
+      top: 81.8198046966%;
+      left: 18.1801949248%;
+      animation-delay: -.25s
+    }
+
+    .sk-ball-spin-clockwise-fade-rotating[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(7) {
+      top: 49.9999750815%;
+      left: 5.0000051215%;
+      animation-delay: -.125s
+    }
+
+    .sk-ball-spin-clockwise-fade-rotating[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(8) {
+      top: 18.179464974%;
+      left: 18.1803700518%;
+      animation-delay: 0s
+    }
+
+    @keyframes ball-spin-clockwise-fade-rotating-rotate {
+      to {
+        transform: rotate(-1turn)
+      }
+    }
+
+    @keyframes ball-spin-clockwise-fade-rotating {
+      50% {
+        opacity: .25;
+        transform: scale(.5)
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1)
+      }
+    }
+
+    .sk-ball-spin-fade-rotating[_ngcontent-plk-c9],
+    .sk-ball-spin-fade-rotating[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      position: relative;
+      box-sizing: border-box
+    }
+
+    .sk-ball-spin-fade-rotating[_ngcontent-plk-c9] {
+      width: 100%;
+      height: 100%;
+      font-size: 0;
+      animation: ball-spin-fade-rotate 6s linear infinite
+    }
+
+    .sk-ball-spin-fade-rotating[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      display: inline-block;
+      float: none;
+      background-color: currentColor;
+      border: 0 solid;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 25%;
+      height: 25%;
+      margin-top: -12.5%;
+      margin-left: -12.5%;
+      border-radius: 100%;
+      animation: ball-spin-fade 1s linear infinite
+    }
+
+    .sk-ball-spin-fade-rotating[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:first-child {
+      top: 5%;
+      left: 50%;
+      animation-delay: -1.125s
+    }
+
+    .sk-ball-spin-fade-rotating[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(2) {
+      top: 18.1801948466%;
+      left: 81.8198051534%;
+      animation-delay: -1.25s
+    }
+
+    .sk-ball-spin-fade-rotating[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(3) {
+      top: 50%;
+      left: 95%;
+      animation-delay: -1.375s
+    }
+
+    .sk-ball-spin-fade-rotating[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(4) {
+      top: 81.8198051534%;
+      left: 81.8198051534%;
+      animation-delay: -1.5s
+    }
+
+    .sk-ball-spin-fade-rotating[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(5) {
+      top: 94.9999999966%;
+      left: 50.0000000005%;
+      animation-delay: -1.625s
+    }
+
+    .sk-ball-spin-fade-rotating[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(6) {
+      top: 81.8198046966%;
+      left: 18.1801949248%;
+      animation-delay: -1.75s
+    }
+
+    .sk-ball-spin-fade-rotating[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(7) {
+      top: 49.9999750815%;
+      left: 5.0000051215%;
+      animation-delay: -1.875s
+    }
+
+    .sk-ball-spin-fade-rotating[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(8) {
+      top: 18.179464974%;
+      left: 18.1803700518%;
+      animation-delay: -2s
+    }
+
+    @keyframes ball-spin-fade-rotate {
+      to {
+        transform: rotate(1turn)
+      }
+    }
+
+    @keyframes ball-spin-fade {
+
+      0%,
+      to {
+        opacity: 1;
+        transform: scale(1)
+      }
+
+      50% {
+        opacity: .25;
+        transform: scale(.5)
+      }
+    }
+
+    .sk-chasing-dots[_ngcontent-plk-c9] {
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      text-align: center;
+      animation: sk-chasingDots-rotate 2s linear infinite
+    }
+
+    .sk-chasing-dots[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      width: 60%;
+      height: 60%;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      background-color: currentColor;
+      border-radius: 100%;
+      animation: sk-chasingDots-bounce 2s ease-in-out infinite
+    }
+
+    .sk-chasing-dots[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(2) {
+      top: auto;
+      bottom: 0;
+      animation-delay: -1s
+    }
+
+    @keyframes sk-chasingDots-rotate {
+      to {
+        transform: rotate(1turn)
+      }
+    }
+
+    @keyframes sk-chasingDots-bounce {
+
+      0%,
+      to {
+        transform: scale(0)
+      }
+
+      50% {
+        transform: scale(1)
+      }
+    }
+
+    .sk-circle[_ngcontent-plk-c9] {
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      position: relative
+    }
+
+    .sk-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0
+    }
+
+    .sk-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:before {
+      content: "";
+      display: block;
+      margin: 0 auto;
+      width: 15%;
+      height: 15%;
+      background-color: currentColor;
+      border-radius: 100%;
+      animation: sk-circle-bounceDelay 1.2s ease-in-out infinite both
+    }
+
+    .sk-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(2) {
+      transform: rotate(30deg)
+    }
+
+    .sk-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(3) {
+      transform: rotate(60deg)
+    }
+
+    .sk-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(4) {
+      transform: rotate(90deg)
+    }
+
+    .sk-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(5) {
+      transform: rotate(120deg)
+    }
+
+    .sk-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(6) {
+      transform: rotate(150deg)
+    }
+
+    .sk-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(7) {
+      transform: rotate(180deg)
+    }
+
+    .sk-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(8) {
+      transform: rotate(210deg)
+    }
+
+    .sk-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(9) {
+      transform: rotate(240deg)
+    }
+
+    .sk-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(10) {
+      transform: rotate(270deg)
+    }
+
+    .sk-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(11) {
+      transform: rotate(300deg)
+    }
+
+    .sk-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(12) {
+      transform: rotate(330deg)
+    }
+
+    .sk-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(2):before {
+      animation-delay: -1.1s
+    }
+
+    .sk-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(3):before {
+      animation-delay: -1s
+    }
+
+    .sk-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(4):before {
+      animation-delay: -.9s
+    }
+
+    .sk-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(5):before {
+      animation-delay: -.8s
+    }
+
+    .sk-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(6):before {
+      animation-delay: -.7s
+    }
+
+    .sk-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(7):before {
+      animation-delay: -.6s
+    }
+
+    .sk-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(8):before {
+      animation-delay: -.5s
+    }
+
+    .sk-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(9):before {
+      animation-delay: -.4s
+    }
+
+    .sk-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(10):before {
+      animation-delay: -.3s
+    }
+
+    .sk-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(11):before {
+      animation-delay: -.2s
+    }
+
+    .sk-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(12):before {
+      animation-delay: -.1s
+    }
+
+    @keyframes sk-circle-bounceDelay {
+
+      0%,
+      80%,
+      to {
+        transform: scale(0)
+      }
+
+      40% {
+        transform: scale(1)
+      }
+    }
+
+    .sk-cube-grid[_ngcontent-plk-c9] {
+      width: 100%;
+      height: 100%;
+      margin: auto
+    }
+
+    .sk-cube-grid[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      width: 33%;
+      height: 33%;
+      background-color: currentColor;
+      float: left;
+      animation: sk-cubeGrid-scaleDelay 1.3s ease-in-out infinite
+    }
+
+    .sk-cube-grid[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:first-child {
+      animation-delay: .2s
+    }
+
+    .sk-cube-grid[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(2) {
+      animation-delay: .3s
+    }
+
+    .sk-cube-grid[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(3) {
+      animation-delay: .4s
+    }
+
+    .sk-cube-grid[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(4) {
+      animation-delay: .1s
+    }
+
+    .sk-cube-grid[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(5) {
+      animation-delay: .2s
+    }
+
+    .sk-cube-grid[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(6) {
+      animation-delay: .3s
+    }
+
+    .sk-cube-grid[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(7) {
+      animation-delay: 0s
+    }
+
+    .sk-cube-grid[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(8) {
+      animation-delay: .1s
+    }
+
+    .sk-cube-grid[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(9) {
+      animation-delay: .2s
+    }
+
+    @keyframes sk-cubeGrid-scaleDelay {
+
+      0%,
+      70%,
+      to {
+        transform: scaleX(1)
+      }
+
+      35% {
+        transform: scale3D(0, 0, 1)
+      }
+    }
+
+    .sk-double-bounce[_ngcontent-plk-c9] {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      margin: auto
+    }
+
+    .sk-double-bounce[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: currentColor;
+      opacity: .6;
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: sk-doubleBounce-bounce 2s ease-in-out infinite
+    }
+
+    .sk-double-bounce[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(2) {
+      animation-delay: -1s
+    }
+
+    @keyframes sk-doubleBounce-bounce {
+
+      0%,
+      to {
+        transform: scale(0)
+      }
+
+      50% {
+        transform: scale(1)
+      }
+    }
+
+    .sk-fading-circle[_ngcontent-plk-c9] {
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      position: relative
+    }
+
+    .sk-fading-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0
+    }
+
+    .sk-fading-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:before {
+      content: "";
+      display: block;
+      margin: 0 auto;
+      width: 15%;
+      height: 15%;
+      background-color: currentColor;
+      border-radius: 100%;
+      animation: sk-fadingCircle-FadeDelay 1.2s ease-in-out infinite both
+    }
+
+    .sk-fading-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(2) {
+      transform: rotate(30deg)
+    }
+
+    .sk-fading-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(3) {
+      transform: rotate(60deg)
+    }
+
+    .sk-fading-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(4) {
+      transform: rotate(90deg)
+    }
+
+    .sk-fading-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(5) {
+      transform: rotate(120deg)
+    }
+
+    .sk-fading-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(6) {
+      transform: rotate(150deg)
+    }
+
+    .sk-fading-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(7) {
+      transform: rotate(180deg)
+    }
+
+    .sk-fading-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(8) {
+      transform: rotate(210deg)
+    }
+
+    .sk-fading-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(9) {
+      transform: rotate(240deg)
+    }
+
+    .sk-fading-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(10) {
+      transform: rotate(270deg)
+    }
+
+    .sk-fading-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(11) {
+      transform: rotate(300deg)
+    }
+
+    .sk-fading-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(12) {
+      transform: rotate(330deg)
+    }
+
+    .sk-fading-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(2):before {
+      animation-delay: -1.1s
+    }
+
+    .sk-fading-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(3):before {
+      animation-delay: -1s
+    }
+
+    .sk-fading-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(4):before {
+      animation-delay: -.9s
+    }
+
+    .sk-fading-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(5):before {
+      animation-delay: -.8s
+    }
+
+    .sk-fading-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(6):before {
+      animation-delay: -.7s
+    }
+
+    .sk-fading-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(7):before {
+      animation-delay: -.6s
+    }
+
+    .sk-fading-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(8):before {
+      animation-delay: -.5s
+    }
+
+    .sk-fading-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(9):before {
+      animation-delay: -.4s
+    }
+
+    .sk-fading-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(10):before {
+      animation-delay: -.3s
+    }
+
+    .sk-fading-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(11):before {
+      animation-delay: -.2s
+    }
+
+    .sk-fading-circle[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(12):before {
+      animation-delay: -.1s
+    }
+
+    @keyframes sk-fadingCircle-FadeDelay {
+
+      0%,
+      39%,
+      to {
+        opacity: 0
+      }
+
+      40% {
+        opacity: 1
+      }
+    }
+
+    .sk-folding-cube[_ngcontent-plk-c9] {
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform: rotate(45deg)
+    }
+
+    .sk-folding-cube[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      float: left;
+      width: 50%;
+      height: 50%;
+      position: relative;
+      transform: scale(1.1)
+    }
+
+    .sk-folding-cube[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: currentColor;
+      animation: sk-foldingCube-angle 2.4s linear infinite both;
+      transform-origin: 100% 100%
+    }
+
+    .sk-folding-cube[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(2) {
+      transform: scale(1.1) rotate(90deg)
+    }
+
+    .sk-folding-cube[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(3) {
+      transform: scale(1.1) rotate(270deg)
+    }
+
+    .sk-folding-cube[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(4) {
+      transform: scale(1.1) rotate(180deg)
+    }
+
+    .sk-folding-cube[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(2):before {
+      animation-delay: .3s
+    }
+
+    .sk-folding-cube[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(3):before {
+      animation-delay: .9s
+    }
+
+    .sk-folding-cube[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(4):before {
+      animation-delay: .6s
+    }
+
+    @keyframes sk-foldingCube-angle {
+
+      0%,
+      10% {
+        transform: perspective(140px) rotateX(-180deg);
+        opacity: 0
+      }
+
+      25%,
+      75% {
+        transform: perspective(140px) rotateX(0deg);
+        opacity: 1
+      }
+
+      90%,
+      to {
+        transform: perspective(140px) rotateY(180deg);
+        opacity: 0
+      }
+    }
+
+    .sk-pulse[_ngcontent-plk-c9] {
+      width: 100%;
+      height: 100%;
+      margin: auto
+    }
+
+    .sk-pulse[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      width: 100%;
+      height: 100%;
+      background-color: currentColor;
+      border-radius: 100%;
+      animation: sk-pulse-scaleOut 1s ease-in-out infinite
+    }
+
+    @keyframes sk-pulse-scaleOut {
+      0% {
+        transform: scale(0)
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 0
+      }
+    }
+
+    .sk-rectangle-bounce[_ngcontent-plk-c9] {
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      font-size: 0
+    }
+
+    .sk-rectangle-bounce[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      background-color: currentColor;
+      height: 100%;
+      width: 10%;
+      margin: 0 5%;
+      display: inline-block;
+      animation: sk-rectangleBounce-stretchDelay 1.2s ease-in-out infinite
+    }
+
+    .sk-rectangle-bounce[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(2) {
+      animation-delay: -1.1s
+    }
+
+    .sk-rectangle-bounce[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(3) {
+      animation-delay: -1s
+    }
+
+    .sk-rectangle-bounce[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(4) {
+      animation-delay: -.9s
+    }
+
+    .sk-rectangle-bounce[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(5) {
+      animation-delay: -.8s
+    }
+
+    @keyframes sk-rectangleBounce-stretchDelay {
+
+      0%,
+      40%,
+      to {
+        transform: scaleY(.4)
+      }
+
+      20% {
+        transform: scaleY(1)
+      }
+    }
+
+    .sk-rectangle-bounce-party[_ngcontent-plk-c9],
+    .sk-rectangle-bounce-party[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      position: relative;
+      box-sizing: border-box
+    }
+
+    .sk-rectangle-bounce-party[_ngcontent-plk-c9] {
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      font-size: 0
+    }
+
+    .sk-rectangle-bounce-party[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      display: inline-block;
+      float: none;
+      background-color: currentColor;
+      border: 0 solid;
+      width: 10%;
+      height: 100%;
+      margin: 0 5%;
+      border-radius: 0;
+      animation-name: rectangle-bounce-party;
+      animation-iteration-count: infinite
+    }
+
+    .sk-rectangle-bounce-party[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:first-child {
+      animation-duration: .43s;
+      animation-delay: -.23s
+    }
+
+    .sk-rectangle-bounce-party[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(2) {
+      animation-duration: .62s;
+      animation-delay: -.32s
+    }
+
+    .sk-rectangle-bounce-party[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(3) {
+      animation-duration: .43s;
+      animation-delay: -.44s
+    }
+
+    .sk-rectangle-bounce-party[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(4) {
+      animation-duration: .8s;
+      animation-delay: -.31s
+    }
+
+    .sk-rectangle-bounce-party[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(5) {
+      animation-duration: .74s;
+      animation-delay: -.24s
+    }
+
+    @keyframes rectangle-bounce-party {
+      0% {
+        transform: scaleY(1)
+      }
+
+      50% {
+        transform: scaleY(.4)
+      }
+
+      to {
+        transform: scaleY(1)
+      }
+    }
+
+    .sk-rectangle-bounce-pulse-out[_ngcontent-plk-c9],
+    .sk-rectangle-bounce-pulse-out[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      position: relative;
+      box-sizing: border-box
+    }
+
+    .sk-rectangle-bounce-pulse-out[_ngcontent-plk-c9] {
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      font-size: 0
+    }
+
+    .sk-rectangle-bounce-pulse-out[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      display: inline-block;
+      float: none;
+      background-color: currentColor;
+      border: 0 solid;
+      width: 10%;
+      height: 100%;
+      margin: 0 5%;
+      border-radius: 0;
+      animation: rectangle-bounce-pulse-out .9s cubic-bezier(.85, .25, .37, .85) infinite
+    }
+
+    .sk-rectangle-bounce-pulse-out[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(3) {
+      animation-delay: -.9s
+    }
+
+    .sk-rectangle-bounce-pulse-out[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(2),
+    .sk-rectangle-bounce-pulse-out[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(4) {
+      animation-delay: -.7s
+    }
+
+    .sk-rectangle-bounce-pulse-out[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:first-child,
+    .sk-rectangle-bounce-pulse-out[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(5) {
+      animation-delay: -.5s
+    }
+
+    @keyframes rectangle-bounce-pulse-out {
+      0% {
+        transform: scaley(1)
+      }
+
+      50% {
+        transform: scaley(.4)
+      }
+
+      to {
+        transform: scaley(1)
+      }
+    }
+
+    .sk-rectangle-bounce-pulse-out-rapid[_ngcontent-plk-c9],
+    .sk-rectangle-bounce-pulse-out-rapid[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      position: relative;
+      box-sizing: border-box
+    }
+
+    .sk-rectangle-bounce-pulse-out-rapid[_ngcontent-plk-c9] {
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      font-size: 0
+    }
+
+    .sk-rectangle-bounce-pulse-out-rapid[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      display: inline-block;
+      float: none;
+      background-color: currentColor;
+      border: 0 solid;
+      width: 10%;
+      height: 100%;
+      margin: 0 5%;
+      border-radius: 0;
+      animation: rectangle-bounce-pulse-out-rapid .9s cubic-bezier(.11, .49, .38, .78) infinite
+    }
+
+    .sk-rectangle-bounce-pulse-out-rapid[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(3) {
+      animation-delay: -.9s
+    }
+
+    .sk-rectangle-bounce-pulse-out-rapid[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(2),
+    .sk-rectangle-bounce-pulse-out-rapid[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(4) {
+      animation-delay: -.65s
+    }
+
+    .sk-rectangle-bounce-pulse-out-rapid[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:first-child,
+    .sk-rectangle-bounce-pulse-out-rapid[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(5) {
+      animation-delay: -.4s
+    }
+
+    @keyframes rectangle-bounce-pulse-out-rapid {
+      0% {
+        transform: scaley(1)
+      }
+
+      80% {
+        transform: scaley(.4)
+      }
+
+      90% {
+        transform: scaley(1)
+      }
+    }
+
+    .sk-rotating-plane[_ngcontent-plk-c9] {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      margin: auto
+    }
+
+    .sk-rotating-plane[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      width: 100%;
+      height: 100%;
+      background-color: currentColor;
+      animation: sk-rotatePlane 1.2s ease-in-out infinite
+    }
+
+    @keyframes sk-rotatePlane {
+      0% {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+      }
+
+      50% {
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+      }
+
+      to {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg)
+      }
+    }
+
+    .sk-square-jelly-box[_ngcontent-plk-c9],
+    .sk-square-jelly-box[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      position: relative;
+      box-sizing: border-box
+    }
+
+    .sk-square-jelly-box[_ngcontent-plk-c9] {
+      width: 100%;
+      height: 100%;
+      font-size: 0
+    }
+
+    .sk-square-jelly-box[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      display: inline-block;
+      float: none;
+      background-color: currentColor;
+      border: 0 solid
+    }
+
+    .sk-square-jelly-box[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:first-child,
+    .sk-square-jelly-box[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(2) {
+      position: absolute;
+      left: 0;
+      width: 100%
+    }
+
+    .sk-square-jelly-box[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:first-child {
+      top: -25%;
+      z-index: 99997;
+      height: 100%;
+      border-radius: 10%;
+      animation: square-jelly-box-animate .6s linear -.1s infinite
+    }
+
+    .sk-square-jelly-box[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(2) {
+      bottom: -9%;
+      height: 10%;
+      background: #000;
+      border-radius: 50%;
+      opacity: .2;
+      animation: square-jelly-box-shadow .6s linear -.1s infinite
+    }
+
+    @keyframes square-jelly-box-animate {
+      17% {
+        border-bottom-right-radius: 10%
+      }
+
+      25% {
+        transform: translateY(25%) rotate(22.5deg)
+      }
+
+      50% {
+        border-bottom-right-radius: 100%;
+        transform: translateY(50%) scaleY(.9) rotate(45deg)
+      }
+
+      75% {
+        transform: translateY(25%) rotate(67.5deg)
+      }
+
+      to {
+        transform: translateY(0) rotate(90deg)
+      }
+    }
+
+    @keyframes square-jelly-box-shadow {
+      50% {
+        transform: scaleX(1.25)
+      }
+    }
+
+    .sk-square-loader[_ngcontent-plk-c9],
+    .sk-square-loader[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      position: relative;
+      box-sizing: border-box
+    }
+
+    .sk-square-loader[_ngcontent-plk-c9] {
+      font-size: 0;
+      width: 100%;
+      height: 100%
+    }
+
+    .sk-square-loader[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      display: inline-block;
+      float: none;
+      background-color: currentColor;
+      border: 0 solid;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      border-width: 3px;
+      border-radius: 0;
+      animation: square-loader 2s ease infinite
+    }
+
+    .sk-square-loader[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:after {
+      display: inline-block;
+      width: 100%;
+      vertical-align: top;
+      content: "";
+      background-color: currentColor;
+      animation: square-loader-inner 2s ease-in infinite
+    }
+
+    @keyframes square-loader {
+      0% {
+        transform: rotate(0deg)
+      }
+
+      25% {
+        transform: rotate(180deg)
+      }
+
+      50% {
+        transform: rotate(180deg)
+      }
+
+      75% {
+        transform: rotate(1turn)
+      }
+
+      to {
+        transform: rotate(1turn)
+      }
+    }
+
+    @keyframes square-loader-inner {
+      0% {
+        height: 0
+      }
+
+      25% {
+        height: 0
+      }
+
+      50% {
+        height: 100%
+      }
+
+      75% {
+        height: 100%
+      }
+
+      to {
+        height: 0
+      }
+    }
+
+    .sk-three-bounce[_ngcontent-plk-c9] {
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      text-align: center
+    }
+
+    .sk-three-bounce[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      margin-top: 35%;
+      width: 30%;
+      height: 30%;
+      background-color: currentColor;
+      border-radius: 100%;
+      display: inline-block;
+      animation: sk-threeBounce-bounceDelay 1.4s ease-in-out infinite both
+    }
+
+    .bottom-center[_ngcontent-plk-c9]>.sk-three-bounce[_ngcontent-plk-c9]>div[_ngcontent-plk-c9],
+    .bottom-left[_ngcontent-plk-c9]>.sk-three-bounce[_ngcontent-plk-c9]>div[_ngcontent-plk-c9],
+    .bottom-right[_ngcontent-plk-c9]>.sk-three-bounce[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      margin-top: 70% !important
+    }
+
+    .top-center[_ngcontent-plk-c9]>.sk-three-bounce[_ngcontent-plk-c9]>div[_ngcontent-plk-c9],
+    .top-left[_ngcontent-plk-c9]>.sk-three-bounce[_ngcontent-plk-c9]>div[_ngcontent-plk-c9],
+    .top-right[_ngcontent-plk-c9]>.sk-three-bounce[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      margin-top: 0 !important
+    }
+
+    .sk-three-bounce[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:first-child {
+      animation-delay: -.32s
+    }
+
+    .sk-three-bounce[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(2) {
+      animation-delay: -.16s
+    }
+
+    @keyframes sk-threeBounce-bounceDelay {
+
+      0%,
+      80%,
+      to {
+        transform: scale(0)
+      }
+
+      40% {
+        transform: scale(1)
+      }
+    }
+
+    .sk-three-strings[_ngcontent-plk-c9],
+    .sk-three-strings[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      width: 100%;
+      height: 100%
+    }
+
+    .sk-three-strings[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      position: absolute;
+      box-sizing: border-box;
+      border-radius: 50%
+    }
+
+    .sk-three-strings[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:first-child {
+      left: 0;
+      top: 0;
+      animation: sk-threeStrings-rotateOne 1s linear infinite;
+      border-bottom: 3px solid
+    }
+
+    .sk-three-strings[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(2) {
+      right: 0;
+      top: 0;
+      animation: sk-threeStrings-rotateTwo 1s linear infinite;
+      border-right: 3px solid
+    }
+
+    .sk-three-strings[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(3) {
+      right: 0;
+      bottom: 0;
+      animation: sk-threeStrings-rotateThree 1s linear infinite;
+      border-top: 3px solid
+    }
+
+    @keyframes sk-threeStrings-rotateOne {
+      0% {
+        transform: rotateX(35deg) rotateY(-45deg) rotate(0deg)
+      }
+
+      to {
+        transform: rotateX(35deg) rotateY(-45deg) rotate(1turn)
+      }
+    }
+
+    @keyframes sk-threeStrings-rotateTwo {
+      0% {
+        transform: rotateX(50deg) rotateY(10deg) rotate(0deg)
+      }
+
+      to {
+        transform: rotateX(50deg) rotateY(10deg) rotate(1turn)
+      }
+    }
+
+    @keyframes sk-threeStrings-rotateThree {
+      0% {
+        transform: rotateX(35deg) rotateY(55deg) rotate(0deg)
+      }
+
+      to {
+        transform: rotateX(35deg) rotateY(55deg) rotate(1turn)
+      }
+    }
+
+    .sk-wandering-cubes[_ngcontent-plk-c9] {
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      text-align: center
+    }
+
+    .sk-wandering-cubes[_ngcontent-plk-c9]>div[_ngcontent-plk-c9] {
+      background-color: currentColor;
+      width: 25%;
+      height: 25%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: sk-wanderingCubes-cubeMove 1.8s ease-in-out infinite
+    }
+
+    .sk-wandering-cubes[_ngcontent-plk-c9]>div[_ngcontent-plk-c9]:nth-child(2) {
+      animation-delay: -.9s
+    }
+
+    @keyframes sk-wanderingCubes-cubeMove {
+      25% {
+        transform: translateX(290%) rotate(-90deg) scale(.5)
+      }
+
+      50% {
+        transform: translateX(290%) translateY(290%) rotate(-179deg)
+      }
+
+      50.1% {
+        transform: translateX(290%) translateY(290%) rotate(-180deg)
+      }
+
+      75% {
+        transform: translateX(0) translateY(290%) rotate(-270deg) scale(.5)
+      }
+
+      to {
+        transform: rotate(-1turn)
+      }
+    }
+  </style>
+  <style>
+    .hidden-xs[_ngcontent-plk-c30] {
+      display: block !important
+    }
+
+    @media screen and (min-width:480px) {
+      .hidden-xs[_ngcontent-plk-c30] {
+        display: none !important
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <app-root _nghost-plk-c38="" ng-version="9.1.13">
+      <ngx-ui-loader _ngcontent-plk-c38="" _nghost-plk-c9="">
+        <div _ngcontent-plk-c9="" class="ngx-progress-bar ngx-progress-bar-ltr"
+          style="height: 3px; color: rgb(0, 172, 193);"></div>
+        <!---->
+        <div _ngcontent-plk-c9="" class="ngx-overlay"
+          style="background-color: rgba(40, 40, 40, 0.8); border-radius: 0px;">
+          <!---->
+          <div _ngcontent-plk-c9="" class="ngx-foreground-spinner center-center"
+            style="color: rgb(51, 122, 183); width: 60px; height: 60px; top: 50%;">
+            <div _ngcontent-plk-c9="" class="sk-ball-scale-multiple">
+              <div _ngcontent-plk-c9=""></div>
+              <div _ngcontent-plk-c9=""></div>
+              <div _ngcontent-plk-c9=""></div>
+              <!---->
+            </div>
+            <!---->
+            <!---->
+          </div>
+          <div _ngcontent-plk-c9="" class="ngx-loading-text center-center" style="top: 50%; color: rgb(255, 255, 255);">
+          </div>
+        </div>
+        <div _ngcontent-plk-c9="" class="ngx-background-spinner bottom-right"
+          style="width: 60px; height: 60px; opacity: 0.5;">
+          <div _ngcontent-plk-c9="" class="sk-rectangle-bounce">
+            <div _ngcontent-plk-c9=""></div>
+            <div _ngcontent-plk-c9=""></div>
+            <div _ngcontent-plk-c9=""></div>
+            <div _ngcontent-plk-c9=""></div>
+            <div _ngcontent-plk-c9=""></div>
+            <!---->
+          </div>
+          <!---->
+          <!---->
+        </div>
+      </ngx-ui-loader>
+      <router-outlet _ngcontent-plk-c38=""></router-outlet>
+      <app-home _nghost-plk-c30="">
+        <header _ngcontent-plk-c30="" id="home">
+          <nav _ngcontent-plk-c30=""
+            class="navbar navbar-default attr-bg navbar-fixed white bootsnav on no-full no-background">
+            <div _ngcontent-plk-c30="" class="container">
+              <div _ngcontent-plk-c30="" class="attr-nav">
+                <ul _ngcontent-plk-c30="">
+                  <li _ngcontent-plk-c30="" class="button"><a _ngcontent-plk-c30="" routerlink="/sign-up"
+                      href="https://app.hiiree.com/sign-up">Sign Up</a></li>
+                </ul>
+              </div>
+              <div _ngcontent-plk-c30="" class="navbar-header"><button _ngcontent-plk-c30="" type="button"
+                  data-toggle="collapse" data-target="#navbar-menu" class="navbar-toggle"><i _ngcontent-plk-c30=""
+                    class="fa fa-bars"></i></button><a _ngcontent-plk-c30="" href="#" class="navbar-brand">
+                    <img
+                    _ngcontent-plk-c30="" src="assets/img/hiiree_logo.jpeg" alt="Logo" class="logo logo-display"
+                    style="max-width: 90px; border-radius: 50%;">
+                    <img _ngcontent-plk-c30="" src="assets/img/hiiree_logo.jpeg" alt="Logo"
+                    class="logo logo-scrolled" style="max-width: 70px; border-radius: 50%;"></a></div>
+              <div _ngcontent-plk-c30="" id="navbar-menu" class="collapse navbar-collapse">
+                <ul _ngcontent-plk-c30="" data-in="#" data-out="#" class="nav navbar-nav navbar-right">
+                  <li _ngcontent-plk-c30=""><a _ngcontent-plk-c30="" href="#productFeatures" class="smooth-menu">Product
+                      Features</a></li>
+                  <li _ngcontent-plk-c30=""><a _ngcontent-plk-c30="" href="#keyBenefits" class="smooth-menu">Key
+                      Benefits</a></li>
+                  <!-- <li _ngcontent-plk-c30=""><a _ngcontent-plk-c30="" href="#pricing" class="smooth-menu">Pricing</a>
+                  </li> -->
+                  <li _ngcontent-plk-c30=""><a _ngcontent-plk-c30="" href="#contact" class="smooth-menu"
+                      style="color: red;">Request Demo</a></li>
+                  <li _ngcontent-plk-c30=""><a _ngcontent-plk-c30="" target="_blank" href="https://app.hiiree.com/" class="smooth-menu">Sign
+                      In</a></li>
+                  <li _ngcontent-plk-c30="" class="hidden-xs"><a _ngcontent-plk-c30="" routerlink="/signup"
+                      class="smooth-menu" href="https://app.hiiree.com/sign-up">Sign Up</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </header>
+        <div _ngcontent-plk-c30=""
+          class="banner-area bottom-shadow big-thumb text-default bg-fixed shadow dark text-light"
+          style="background-image: url(assets/img/1393237.webp);">
+          <div _ngcontent-plk-c30="" class="box-table">
+            <div _ngcontent-plk-c30="" class="box-cell">
+              <div _ngcontent-plk-c30="" class="container">
+                <div _ngcontent-plk-c30="" class="double-items">
+                  <div _ngcontent-plk-c30="" class="row align-center">
+                    <div _ngcontent-plk-c30="" class="col-lg-6 left-info simple-video">
+                      <div _ngcontent-plk-c30="" data-animation="animated fadeInUpBig" class="content">
+                        <h2 _ngcontent-plk-c30="" data-wow-duration="1s" class="wow fadeInDown"
+                          style="visibility: visible; animation-duration: 1s; animation-name: fadeInDown;">Transform
+                          Hiring Process<br _ngcontent-plk-c30=""><strong _ngcontent-plk-c30="">With Video
+                            Interviews</strong></h2>
+                        <p _ngcontent-plk-c30="" data-wow-duration="1.5s" class="wow fadeInLeft"
+                          style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInLeft;">
+                          Efficiently engage, prescreen, interview, and hire best talent </p>
+                        <!-- <div _ngcontent-plk-c30="" class="bottom"><a _ngcontent-plk-c30=""
+                            href="https://www.youtube.com/watch?v=0TPhZZfonwU"
+                            class="popup-youtube relative theme video-play-button"><i _ngcontent-plk-c30=""
+                              class="ti-control-play"></i></a></div> -->
+                      </div>
+                    </div>
+                    <div _ngcontent-plk-c30="" class="col-lg-6 right-info"><img _ngcontent-plk-c30=""
+                        src="assets/img/03c.jpeg" alt="Thumb"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div _ngcontent-plk-c30="" id="productFeatures" class="features-area default-padding-top bottom-less">
+          <div _ngcontent-plk-c30="" class="container">
+            <div _ngcontent-plk-c30="" class="row">
+              <div _ngcontent-plk-c30="" class="col-lg-8 offset-lg-2">
+                <div _ngcontent-plk-c30="" class="site-heading text-center">
+                  <h5 _ngcontent-plk-c30="">How Does Hiiree Works!</h5>
+                  <h2 _ngcontent-plk-c30="" class="area-title">Designed For Recruitment Needs of Medical Industry </h2>
+                  <div _ngcontent-plk-c30="" class="devider"></div>
+                  <p _ngcontent-plk-c30="" class="area-title" style="font-size: 18px;">Removing bottlenecks from the
+                    hiring process by introducing video interviews</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div _ngcontent-plk-c30="" class="container">
+            <div _ngcontent-plk-c30="" class="features-items text-center">
+              <div _ngcontent-plk-c30="" class="row">
+                <div _ngcontent-plk-c30="" class="single-item col-lg-4 col-md-6">
+                  <div _ngcontent-plk-c30="" class="item">
+                    <div _ngcontent-plk-c30="" class="icon"><i _ngcontent-plk-c30="" class="flaticon-label"></i></div>
+                    <h4 _ngcontent-plk-c30="">Easy Setup</h4>
+                    <p _ngcontent-plk-c30=""> Add candidates, select interview questions and time frame. One time link
+                      will be sent to each candidate. </p>
+                  </div>
+                </div>
+                <div _ngcontent-plk-c30="" class="single-item col-lg-4 col-md-6">
+                  <div _ngcontent-plk-c30="" class="item">
+                    <div _ngcontent-plk-c30="" class="icon"><i _ngcontent-plk-c30="" class="flaticon-speech-bubble"></i>
+                    </div>
+                    <h4 _ngcontent-plk-c30="">Flexibility</h4>
+                    <p _ngcontent-plk-c30=""> Candidates record interviews at their convenience within the define time
+                      frame </p>
+                  </div>
+                </div>
+                <div _ngcontent-plk-c30="" class="single-item col-lg-4 col-md-6">
+                  <div _ngcontent-plk-c30="" class="item">
+                    <div _ngcontent-plk-c30="" class="icon"><i _ngcontent-plk-c30="" class="flaticon-file"></i></div>
+                    <h4 _ngcontent-plk-c30="">Analytics</h4>
+                    <p _ngcontent-plk-c30=""> HR receives video link and analytics for ongoing and completed interviews
+                      for informed decision making </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div _ngcontent-plk-c30="" id="keyBenefits" class="process-area default-padding-top">
+          <div _ngcontent-plk-c30="" class="shape-left-top shape opacity-default"><img _ngcontent-plk-c30=""
+              src="assets/img/shape/7.png" alt="Shape"></div>
+          <div _ngcontent-plk-c30="" class="container">
+            <div _ngcontent-plk-c30="" class="row align-center">
+              <div _ngcontent-plk-c30="" class="col-lg-6 thumb"><img _ngcontent-plk-c30=""
+                  src="assets/img/feature.png" alt="Thumb"></div>
+              <div _ngcontent-plk-c30="" class="col-lg-6 info ml-auto">
+                <h2 _ngcontent-plk-c30="" class="area-title">Key Benefits</h2>
+                <ul _ngcontent-plk-c30="">
+                  <li _ngcontent-plk-c30="">
+                    <div _ngcontent-plk-c30="" class="icon"><i _ngcontent-plk-c30=""
+                        class="flaticon-presentation"></i><span _ngcontent-plk-c30="">01</span></div>
+                    <div _ngcontent-plk-c30="" class="info">
+                      <h4 _ngcontent-plk-c30="">Convenience</h4>
+                      <p _ngcontent-plk-c30=""> Save time i.e. No need for back and forth phone calls &amp; interview
+                        scheduling coordination. </p>
+                    </div>
+                  </li>
+                  <li _ngcontent-plk-c30="">
+                    <div _ngcontent-plk-c30="" class="icon"><i _ngcontent-plk-c30="" class="flaticon-target"></i><span
+                        _ngcontent-plk-c30="">02</span></div>
+                    <div _ngcontent-plk-c30="" class="info">
+                      <h4 _ngcontent-plk-c30="">Transparency</h4>
+                      <p _ngcontent-plk-c30=""> No more fake phone interviews. Real interview simulation with one
+                        attempt per candidate. </p>
+                    </div>
+                  </li>
+                  <li _ngcontent-plk-c30="">
+                    <div _ngcontent-plk-c30="" class="icon"><i _ngcontent-plk-c30="" class="flaticon-report"></i><span
+                        _ngcontent-plk-c30="">03</span></div>
+                    <div _ngcontent-plk-c30="" class="info">
+                      <h4 _ngcontent-plk-c30="">Collaboration</h4>
+                      <p _ngcontent-plk-c30=""> Allows multiple stakeholders to re-watch recordings at their convenience
+                        and provide ratings. </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div _ngcontent-plk-c30="" class="faq-area default-padding-top">
+          <div _ngcontent-plk-c30="" class="container">
+            <div _ngcontent-plk-c30="" class="faq-items">
+              <div _ngcontent-plk-c30="" class="row align-center">
+                <div _ngcontent-plk-c30="" class="col-lg-6">
+                  <div _ngcontent-plk-c30="" data-wow-delay="0.5s" class="thumb wow fadeInLeft"
+                    style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;"><img
+                      _ngcontent-plk-c30="" src="assets/img/qna.png" alt="Thumb"></div>
+                </div>
+                <div _ngcontent-plk-c30="" class="col-lg-6">
+                  <div _ngcontent-plk-c30="" class="faq-content">
+                    <h2 _ngcontent-plk-c30="" class="area-title">Questions &amp; Answer</h2>
+                    <div _ngcontent-plk-c30="" id="accordionExample" class="accordion">
+                      <div _ngcontent-plk-c30="" class="card">
+                        <div _ngcontent-plk-c30="" id="headingOne" class="card-header">
+                          <h4 _ngcontent-plk-c30="" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne" class="mb-0"> What is a Video Interview?
+                          </h4>
+                        </div>
+                        <div _ngcontent-plk-c30="" id="collapseOne" aria-labelledby="headingOne"
+                          data-parent="#accordionExample" class="collapse show">
+                          <div _ngcontent-plk-c30="" class="card-body">
+                            <p _ngcontent-plk-c30=""> Our software allows you to pre-screen candidates in a more
+                              efficient way than phone screening. Hiring team creates new interviews and adds questions
+                              they want to ask. Candidates record their answers and submit them for the recruiter or
+                              hiring manager to review at their convenience. </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div _ngcontent-plk-c30="" class="card">
+                        <div _ngcontent-plk-c30="" id="headingTwo" class="card-header">
+                          <h4 _ngcontent-plk-c30="" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="false" aria-controls="collapseTwo" class="mb-0 collapsed"> How does it work?
+                          </h4>
+                        </div>
+                        <div _ngcontent-plk-c30="" id="collapseTwo" aria-labelledby="headingTwo"
+                          data-parent="#accordionExample" class="collapse">
+                          <div _ngcontent-plk-c30="" class="card-body">
+                            <p _ngcontent-plk-c30=""> Candidates can record interviews at their convenience, usually in
+                              a specified amount of time mentioned by HR. A recruiter and/or hiring manager can then
+                              review the answers and share top candidates with team members for input on hiring
+                              decisions. The video is then included in the candidate’s profile. </p>
+                            <p _ngcontent-plk-c30=""> The question is displayed and then there is a countdown after
+                              which the recording begins automatically. </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div _ngcontent-plk-c30="" class="card">
+                        <div _ngcontent-plk-c30="" id="headingFour" class="card-header">
+                          <h4 _ngcontent-plk-c30="" data-toggle="collapse" data-target="#collapseFour"
+                            aria-expanded="false" aria-controls="collapseFour" class="mb-0 collapsed"> Do Candidates
+                            like Video Interviews? </h4>
+                        </div>
+                        <div _ngcontent-plk-c30="" id="collapseFour" aria-labelledby="headingFour"
+                          data-parent="#accordionExample" class="collapse">
+                          <div _ngcontent-plk-c30="" class="card-body">
+                            <p _ngcontent-plk-c30=""> Video interviews are popular mainly with employed candidates
+                              because they don’t have to undergo phone screenings while they are at work. With Video
+                              Interview they can do it at their preferred time without having to navigate scheduling
+                              ping-pong to find a time that works. </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div _ngcontent-plk-c30="" id="pricing"
+          class="pricing-area overflow-hidden shape-angle default-padding-top bottom-less">
+          <div _ngcontent-plk-c30="" class="container">
+            <div _ngcontent-plk-c30="" class="row">
+              <div _ngcontent-plk-c30="" class="col-lg-8 offset-lg-2">
+                <div _ngcontent-plk-c30="" class="site-heading light text-center">
+                  <h2 _ngcontent-plk-c30="" class="area-title">Our Packages</h2>
+                  <div _ngcontent-plk-c30="" class="devider"></div>
+                  <p _ngcontent-plk-c30=""> With 24/7 around the globe support and availability, we make sure candidates
+                    and employers can initiate interviews anytime, anywhere. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div _ngcontent-plk-c30="" class="container">
+            <div _ngcontent-plk-c30="" class="pricing text-center">
+              <div _ngcontent-plk-c30="" class="row">
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <div _ngcontent-plk-c30="" class="our-specialty-area default-padding-top">
+          <div _ngcontent-plk-c30="" class="shape-left-bottom shape opacity-default"><img _ngcontent-plk-c30=""
+              src="assets/img/shape/7.png" alt="Shape"></div>
+          <div _ngcontent-plk-c30="" class="container">
+            <div _ngcontent-plk-c30="" class="row align-center">
+              <div _ngcontent-plk-c30="" class="col-lg-6 thumb width-90"><img _ngcontent-plk-c30=""
+                  src="assets/img/video_influencer.png" alt="Thumb"></div>
+              <div _ngcontent-plk-c30="" class="col-lg-6 info">
+                <h2 _ngcontent-plk-c30="" class="area-title">Transforming hiring process through  video interviews</h2>
+                <p _ngcontent-plk-c30=""> Our on-demand platform provides a more scalable and flexible process
+                  for hiring managers, recruiters and candidates. </p>
+                <ul _ngcontent-plk-c30="" class="fun-fact">
+                  <li _ngcontent-plk-c30="">
+                    <div _ngcontent-plk-c30="" class="fun-fact">
+                      <div _ngcontent-plk-c30="" data-to="90" data-speed="5000" class="timer" style="display: initial;">
+                        90</div><span _ngcontent-plk-c30=""
+                        style="display: initial; font-size: 29px; font-weight: 800; color: #232323;">%</span><span
+                        _ngcontent-plk-c30="" class="medium">Decrease in time to hire</span>
+                    </div>
+                  </li>
+                  <li _ngcontent-plk-c30="">
+                    <div _ngcontent-plk-c30="" class="fun-fact">
+                      <div _ngcontent-plk-c30="" data-to="150" data-speed="5000" class="timer"
+                        style="display: initial;">150</div><span _ngcontent-plk-c30=""
+                        style="display: initial; font-size: 29px; font-weight: 800; color: #232323;">%</span><span
+                        _ngcontent-plk-c30="" class="medium">Return on Investment</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div _ngcontent-plk-c30="" class="testimonials-area default-padding">
+          <div _ngcontent-plk-c30="" class="fixed-bg" style="background-image: url(assets/img/map.svg);"></div>
+          <div _ngcontent-plk-c30="" class="container">
+            <div _ngcontent-plk-c30="" class="row">
+              <div _ngcontent-plk-c30="" class="col-lg-8 offset-lg-2">
+                <div _ngcontent-plk-c30="" class="site-heading text-center">
+                  <h2 _ngcontent-plk-c30="" class="area-title">Customers Review</h2>
+                  <div _ngcontent-plk-c30="" class="devider"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div _ngcontent-plk-c30="" class="container">
+            <div _ngcontent-plk-c30="" class="row">
+              <div _ngcontent-plk-c30="" class="col-lg-8 offset-lg-2">
+                <div _ngcontent-plk-c30="" class="testimonial-items text-center">
+                  <div _ngcontent-plk-c30="" data-ride="carousel" id="testimonial-carousel" class="carousel slide">
+                    <div _ngcontent-plk-c30="" class="carousel-inner">
+                      <div _ngcontent-plk-c30="" class="carousel-item"><i _ngcontent-plk-c30=""
+                          class="flaticon-left-quotes-sign"></i>
+                        <p _ngcontent-plk-c30=""> Before using Hiiree, it was slower and time consuming to
+                          interview multiple people and there were a lot of roadblocks such as scheduling conflicts. I
+                          just don’t have the time for that. </p><span _ngcontent-plk-c30="">CTO and Chief People
+                          Officer IrvineTek</span>
+                        <h4 _ngcontent-plk-c30="">Fraz Tajammul</h4>
+                      </div>
+                      <div _ngcontent-plk-c30="" class="carousel-item active"><i _ngcontent-plk-c30=""
+                          class="flaticon-left-quotes-sign"></i>
+                        <p _ngcontent-plk-c30=""> At our Call Center we hire candidates regularly, our recruiter switch
+                          between multiple jobs and they often lose track of candidates, Hiiree is helping our
+                          team stay engaged with right candidates with the help of automation. </p><span
+                          _ngcontent-plk-c30="">CEO Talk Agent</span>
+                        <h4 _ngcontent-plk-c30="">Ali</h4>
+                      </div>
+                      <div _ngcontent-plk-c30="" class="carousel-item"><i _ngcontent-plk-c30=""
+                          class="flaticon-left-quotes-sign"></i>
+                        <p _ngcontent-plk-c30=""> Hiiree has been able to maximize our time as well as my hiring
+                          manager’s. You save us so much time as we don’t have to deal with scheduling calls and asking
+                          basic questions repeatedly for pre screening. </p><span _ngcontent-plk-c30="">Recruiter,
+                          RANECS</span>
+                        <h4 _ngcontent-plk-c30="">Kate</h4>
+                      </div>
+                    </div>
+                    <ol _ngcontent-plk-c30="" class="carousel-indicators">
+                      <li _ngcontent-plk-c30="" data-target="#testimonial-carousel" data-slide-to="0" class=""></li>
+                      <li _ngcontent-plk-c30="" data-target="#testimonial-carousel" data-slide-to="1" class="active">
+                      </li>
+                      <li _ngcontent-plk-c30="" data-target="#testimonial-carousel" data-slide-to="2" class=""></li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <div _ngcontent-plk-c30="" id="contact" class="contact-area default-padding">
+          <div _ngcontent-plk-c30="" class="container">
+            <div _ngcontent-plk-c30="" class="row align-center">
+              <div _ngcontent-plk-c30="" class="col-lg-7 contact-forms m-auto">
+                <div _ngcontent-plk-c30="" class="form-box">
+                  <h2 _ngcontent-plk-c30="" class="area-title text-center">Schedule A Free Demo</h2>
+                  <form _ngcontent-plk-c30="" novalidate="" id="contactForm" class="ng-pristine ng-invalid ng-touched" onsubmit="event.preventDefault(); sendEmail();">
+                    <div _ngcontent-plk-c30="" class="row">
+                      <div _ngcontent-plk-c30="" class="col-lg-12">
+                        <div _ngcontent-plk-c30="" class="form-group"><i _ngcontent-plk-c30=""
+                            class="fas fa-user"></i><input _ngcontent-plk-c30="" id="name" name="name"
+                            placeholder="Name*" required type="text"
+                            class="form-control ng-pristine ng-invalid ng-touched"></div>
+                      </div>
+                    </div>
+                    <div _ngcontent-plk-c30="" class="row">
+                      <div _ngcontent-plk-c30="" class="col-lg-6">
+                        <div _ngcontent-plk-c30="" class="form-group"><i _ngcontent-plk-c30=""
+                            class="fas fa-envelope"></i><input _ngcontent-plk-c30="" id="email" name="email"
+                            placeholder="Email*" required type="email"
+                            class="form-control ng-untouched ng-pristine ng-invalid"></div>
+                      </div>
+                      <div _ngcontent-plk-c30="" class="col-lg-6">
+                        <div _ngcontent-plk-c30="" class="form-group"><i _ngcontent-plk-c30=""
+                            class="fas fa-phone"></i><input _ngcontent-plk-c30="" id="phone" name="phone"
+                            placeholder="Phone" type="text"
+                            class="form-control ng-untouched ng-pristine ng-invalid"></div>
+                      </div>
+                    </div>
+                    <div _ngcontent-plk-c30="" class="row">
+                      <div _ngcontent-plk-c30="" class="col-lg-12">
+                        <div _ngcontent-plk-c30="" class="form-group comments"><i _ngcontent-plk-c30=""
+                            class="fas fa-edit"></i><textarea _ngcontent-plk-c30="" id="comments" name="message"
+                            placeholder="Message"
+                            class="form-control ng-untouched ng-pristine ng-invalid"></textarea></div>
+                      </div>
+                    </div>
+                    <div _ngcontent-plk-c30="" class="row">
+                      <div _ngcontent-plk-c30="" class="col-lg-12 text-right"><button _ngcontent-plk-c30=""
+                          type="submit" name="submit"> Send Message </button></div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer _ngcontent-plk-c30="" class="bg-dark text-light">
+          <div _ngcontent-plk-c30="" class="footer-shape"><img _ngcontent-plk-c30="" src="assets/img/shape/4.png"
+              alt="Shape"></div>
+          <div _ngcontent-plk-c30="" class="container">
+            <div _ngcontent-plk-c30="" class="f-items default-padding">
+              <div _ngcontent-plk-c30="" class="row">
+                <div _ngcontent-plk-c30="" class="col-lg-4 col-md-6 item">
+                  <div _ngcontent-plk-c30="" class="f-item about">
+                    <img
+                    _ngcontent-plk-c30="" src="assets/img/hiiree_logo.jpeg" alt="Logo" class="logo logo-display"
+                    style="max-width: 90px; border-radius: 50%;">
+                    <p _ngcontent-plk-c30=""> Traditional interview processes for recruitment are manual and time
+                      consuming. At best, they’re inefficient for employers and stressful for candidates. We automate
+                      your prescreening process- making it enjoyable and efficient for everyone. </p>
+                  </div>
+                  <div style="display: flex; justify-content: flex-start; align-items: center;">
+                    <img src="/assets/img/hiiree.small.png" style="width: 50px"/>
+                    <img src="/assets/img/ikioo.globelogo.png" style="width: 115px;"/>
+                    <img src="/assets/img/neuronmdlogo2-removebg-preview.png" style="width: 104px;"/>
+                    <img src="/assets/img/nvizylogo.2.png" style="width: 108px;"/>
+                  </div>
+                </div>
+                <div _ngcontent-plk-c30="" class="col-lg-2 col-md-6 item">
+                  <div _ngcontent-plk-c30="" class="f-item link">
+                    <h4 _ngcontent-plk-c30="" class="widget-title">Quick LInk</h4>
+                    <ul _ngcontent-plk-c30="">
+                      <li _ngcontent-plk-c30=""><a _ngcontent-plk-c30="" href="#productFeatures" class="smooth-menu"><i
+                            _ngcontent-plk-c30="" class="fas fa-angle-right"></i> Product Features</a></li>
+                      <li _ngcontent-plk-c30=""><a _ngcontent-plk-c30="" href="#keyBenefits" class="smooth-menu"><i
+                            _ngcontent-plk-c30="" class="fas fa-angle-right"></i> Key Benefits</a></li>
+                      <!-- <li _ngcontent-plk-c30=""><a _ngcontent-plk-c30="" href="#pricing" class="smooth-menu"><i
+                            _ngcontent-plk-c30="" class="fas fa-angle-right"></i> Pricing</a></li> -->
+                      <li _ngcontent-plk-c30=""><a _ngcontent-plk-c30="" href="#contact" class="smooth-menu"><i
+                            _ngcontent-plk-c30="" class="fas fa-angle-right"></i> Contact</a></li>
+                      <li _ngcontent-plk-c30=""><a _ngcontent-plk-c30="" target="_blank" href="https://app.hiiree.com"><i
+                            _ngcontent-plk-c30="" class="fas fa-angle-right"></i>
+                          Sign In</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div _ngcontent-plk-c30="" class="col-lg-3 col-md-6 item">
+                  <div _ngcontent-plk-c30="" class="f-item link"></div>
+                </div>
+                <div _ngcontent-plk-c30="" class="col-lg-3 col-md-6 item">
+                  <div _ngcontent-plk-c30="" class="f-item twitter-widget">
+                    <h4 _ngcontent-plk-c30="" class="widget-title">Contact Info</h4>
+                    <div _ngcontent-plk-c30="" class="address">
+                      <ul _ngcontent-plk-c30="">
+                        <li _ngcontent-plk-c30="">
+                          <div _ngcontent-plk-c30="" class="icon"><i _ngcontent-plk-c30="" class="fas fa-home"></i>
+                          </div>
+                          <div _ngcontent-plk-c30="" class="content"><strong _ngcontent-plk-c30="">Address:</strong>
+                            191 S. Buena Vista Street
+                            Suite # 370
+                            Burbank CA 91505 </div>
+                        </li>
+                        <li _ngcontent-plk-c30="">
+                          <div _ngcontent-plk-c30="" class="icon"><i _ngcontent-plk-c30="" class="fas fa-envelope"></i>
+                          </div>
+                          <div _ngcontent-plk-c30="" class="content"><strong _ngcontent-plk-c30="">Email:</strong><a
+                              _ngcontent-plk-c30="" href="mailto:info@validtheme.com">hello@hiiree.com</a></div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div _ngcontent-plk-c30="" class="footer-bottom">
+            <div _ngcontent-plk-c30="" class="container">
+              <div _ngcontent-plk-c30="" class="row">
+                <div _ngcontent-plk-c30="" class="col-lg-6">
+                  <p _ngcontent-plk-c30="">© Copyright 2021. All Rights Reserved by <a _ngcontent-plk-c30=""
+                      href="#">Hiiree</a></p>
+                </div>
+                <div _ngcontent-plk-c30="" class="col-lg-6 text-right link">
+                  <ul _ngcontent-plk-c30="">
+                    <li _ngcontent-plk-c30=""><a _ngcontent-plk-c30="" target="_blank"
+                        href="/terms.html">Terms</a></li>
+                    <li _ngcontent-plk-c30=""><a _ngcontent-plk-c30="" target="_blank"
+                        href="/policy.html">Privacy</a></li>
+                    <li _ngcontent-plk-c30=""><a _ngcontent-plk-c30="">Support</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </app-home>
+      <!---->
+    </app-root>
+    <noscript>Please enable JavaScript to continue using this application.</noscript>
+
+    <!-- jQuery Frameworks
+  ============================================= -->
+    <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/modernizr.custom.13711.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/progress-bar.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/count-to.js"></script>
+    <script src="assets/js/YTPlayer.min.js"></script>
+    <script src="assets/js/bootsnav.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.1/parsley.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.2/js/toastr.min.js"></script>
+    <script src="assets/js/runtime-es2015.0dae8cbc97194c7caed4.js" type="module"></script>
+    <script src="assets/js/runtime-es5.0dae8cbc97194c7caed4.js" nomodule="" defer=""></script>
+    <script src="assets/js/polyfills-es5.177e85a9724683782539.js" nomodule="" defer=""></script>
+    <script src="assets/js/polyfills-es2015.f332a089ad1600448873.js" type="module"></script>
+    <script src="assets/js/main-es2015.6482ac3ca0f91ac5f6ca.js" type="module"></script>
+    <script src="assets/js/main-es5.6482ac3ca0f91ac5f6ca.js" nomodule="" defer=""></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.25.0/axios.min.js" integrity="sha512-/Q6t3CASm04EliI1QyIDAA/nDo9R8FQ/BULoUFyN4n/BDdyIxeH7u++Z+eobdmr11gG5D/6nPFyDlnisDwhpYA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+      function sendEmail(){
+        const formData = new FormData(document.querySelector('form'))
+        let formObj = {}
+        for (var pair of formData.entries()) {
+          formObj[pair[0]] = pair[1]
+        }
+        if(formObj.name === "" || formObj.email === ""){
+          Swal.fire('Please fill up required fields!', '', 'warning')
+        }else{
+          axios.post("https://my-interview-api.herokuapp.com/api/email/send", formObj).then((resp)=>{
+            Swal.fire('We got your message!', 'We will reply back to you soon.', 'success')
+            document.getElementById("contactForm").reset();
+          })
+        }
+      }
+    </script>
+  </div>
+</body>
+
+</html>
